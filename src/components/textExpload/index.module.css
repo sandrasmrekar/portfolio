@@ -18,7 +18,11 @@
 
 .letter {
   margin: 5px;
-  font-size: 30px;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000,
+    1px 1px 0 #000;
+  font-size: 40px;
+  color: white;
   transform: translateX(0px) translateY(0px) rotate(0deg);
   transition: 0.5s;
   -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
@@ -35,6 +39,8 @@
   font-size: 70px;
   margin-top: -15px;
   color: royalblue;
+  text-shadow: -1px -1px 0 royalblue, 1px -1px 0 royalblue, -2px 2px 0 royalblue,
+    1px 1px 0 royalblue;
 }
 
 /* TRANSITIONS */

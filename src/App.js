@@ -1,10 +1,10 @@
 import "./App.css";
-import TextExpload from "./components/textExpload";
+import MainScreen from "./screens/MainScreen";
 
 function App() {
   return (
     <div className="app">
-      <TextExpload />
+      <MainScreen />
     </div>
   );
 }
