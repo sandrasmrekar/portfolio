@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import styled from "styled-components";
+import LinkIcons from "../components/LinkIcons";
 import Menu from "../components/Menu";
 import { COLORS } from "../styles/colors";
 
@@ -57,6 +58,7 @@ export default function StartScreen() {
           things.
         </Text>
       </TitleContainer>
+      <LinkIcons />
     </Background>
   );
 }
