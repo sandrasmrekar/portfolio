@@ -1,0 +1,47 @@
+.container {
+  position: fixed;
+  right: 20px;
+}
+
+.menuItemContainer {
+  display: flex;
+}
+
+.menuItem {
+  width: 50px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 60px;
+  width: 2px;
+  margin-left: 50%;
+  background-color: #9b9b9b;
+  transition: height 100ms linear;
+}
+
+.barActive {
+  height: 100px;
+  width: 4px;
+  margin-left: 50%;
+  background-color: #8982ff;
+  transition: height 100ms linear;
+}
+
+.text {
+  transform: rotate(-90deg);
+  text-align: right;
+  margin-left: -50%;
+  margin-top: 60px;
+  width: 100px;
+  color: #9b9b9b;
+}
+
+.textActive {
+  transform: rotate(-90deg);
+  text-align: right;
+  margin-left: -50%;
+  margin-top: 60px;
+  width: 100px;
+  color: #8982ff;
+}

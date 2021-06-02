@@ -2,7 +2,9 @@
  * This is the landing screen.
  */
 
+import { useState } from "react";
 import styled from "styled-components";
+import Menu from "../components/Menu";
 import { COLORS } from "../styles/colors";
 
 const Background = styled.div`
@@ -32,8 +34,20 @@ const SmallText = styled.p`
   color: ${COLORS.purpel};
 `;
 export default function StartScreen() {
+  const [menuValue, setMenuValue] = useState("Welcome");
+
+  const handleOnChange = (value) => {
+    setMenuValue(value);
+  };
+
   return (
     <Background>
+      <Menu value={menuValue} onChange={handleOnChange}>
+        <Menu.Item label="Welcome" value="Welcome" />
+        <Menu.Item label="Work" value="Work" />
+        <Menu.Item label="About me" value="About me" />
+        <Menu.Item label="Contact" value="Contact" />
+      </Menu>
       <TitleContainer>
         <SmallText>Hi my name is </SmallText>
         <Header>SANDRA SMREKAR</Header>
