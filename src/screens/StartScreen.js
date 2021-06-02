@@ -7,17 +7,13 @@ import styled from "styled-components";
 import LinkIcons from "../components/LinkIcons";
 import Menu from "../components/Menu";
 import { COLORS } from "../styles/colors";
+import styles from "./StartScreen.module.css";
 
 const Background = styled.div`
   background-color: ${COLORS.background};
   width: 100vw;
   height: 100vh;
   position: fixed;
-`;
-
-const TitleContainer = styled.div`
-  margin-left: 20%;
-  margin-top: 15%;
 `;
 
 const Header = styled.h1`
@@ -49,7 +45,7 @@ export default function StartScreen() {
         <Menu.Item label="About me" value="About me" />
         <Menu.Item label="Contact" value="Contact" />
       </Menu>
-      <TitleContainer>
+      <div className={styles.titleContainer}>
         <SmallText>Hi my name is </SmallText>
         <Header>SANDRA SMREKAR</Header>
         <SubHeader>A frontend developer</SubHeader>
@@ -57,7 +53,7 @@ export default function StartScreen() {
           I am a software engineer with passion for coding and learning new
           things.
         </Text>
-      </TitleContainer>
+      </div>
       <LinkIcons />
     </Background>
   );

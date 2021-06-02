@@ -2,7 +2,7 @@ import { ReactComponent as EmailSvg } from "../../assets/svg/email.svg";
 import { ReactComponent as GithubSvg } from "../../assets/svg/github.svg";
 import { ReactComponent as LinkedInSvg } from "../../assets/svg/linkedIn.svg";
 
-// TODO: Clean up, add links
+// TODO: Clean up, add links, hoover effect so they jump up
 
 export default function LinkIcons() {
   return (
