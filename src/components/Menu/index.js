@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Hamburger from "../Hamburger";
 import styles from "./index.module.css";
 
 const MenuContext = createContext();
@@ -17,14 +18,8 @@ export default function Menu({ value, onChange, children }) {
   return (
     <div>
       <div onClick={handleHamburgerClick} className={styles.hamburger}>
-        <div className={show ? styles.open : ""} id={styles.navicon3}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <Hamburger open={show} />
       </div>
-
       <div className={show ? styles.containerShow : styles.containerHide}>
         <MenuContext.Provider value={{ value, handleOnChange }}>
           <div className={styles.menuItemContainer}>{children}</div>
@@ -40,6 +35,7 @@ function Item({ label, value }) {
     menu.handleOnChange(value);
   };
 
+  // todo clean up
   return (
     <div className={styles.menuItem} onClick={handlePress}>
       {value === menu.value ? (
