@@ -1,0 +1,19 @@
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+  transform: translateY(5px);
+  transition: transform 300ms ease-in-out;
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+  transition: transform 300ms ease-in-out;
+}
+
+.container {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+}
