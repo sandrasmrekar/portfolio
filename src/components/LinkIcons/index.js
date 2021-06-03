@@ -6,9 +6,15 @@ import styles from "./index.module.css";
 export default function LinkIcons() {
   return (
     <div className={styles.container}>
-      <EmailSvg className={styles.icon} />
-      <GithubSvg className={styles.icon} />
-      <LinkedInSvg className={styles.icon} />
+      <a href=" ">
+        <EmailSvg className={styles.icon} />
+      </a>
+      <a href="https://github.com/sandrasmrekar">
+        <GithubSvg className={styles.icon} />
+      </a>
+      <a href="https://www.linkedin.com/in/sandrasmrekar/">
+        <LinkedInSvg className={styles.icon} />
+      </a>
     </div>
   );
 }
