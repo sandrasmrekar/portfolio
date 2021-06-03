@@ -25,6 +25,7 @@ const SubHeader = styled.h2`
 `;
 const Text = styled.h4`
   color: ${COLORS.grey};
+  margin: 10px 0 10px 0;
 `;
 
 const SmallText = styled.p`
@@ -46,7 +47,7 @@ export default function StartScreen() {
         <Menu.Item label="Contact" value="Contact" />
       </Menu>
       <div className={styles.titleContainer}>
-        <SmallText>Hi my name is </SmallText>
+        <SmallText>Hi I'm </SmallText>
         <Header>SANDRA SMREKAR</Header>
         <SubHeader>A frontend developer</SubHeader>
         <Text>
