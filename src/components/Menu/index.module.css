@@ -102,5 +102,6 @@
   .hamburger {
     visibility: hidden;
     height: 0px;
+    position: fixed;
   }
 }
