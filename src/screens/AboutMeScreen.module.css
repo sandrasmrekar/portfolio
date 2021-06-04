@@ -1,4 +1,24 @@
 .container {
   width: 100vw;
   height: 100vh;
+  padding: 5%;
+}
+
+.box {
+  width: 45%;
+  display: flex;
+}
+
+.title {
+  margin: 0 0 10px 0;
+}
+
+.textContainer {
+  padding: 20px;
+}
+
+.p {
+  color: #707070;
+  font-size: 13px;
+  line-height: 1.8;
 }

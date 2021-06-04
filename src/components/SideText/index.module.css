@@ -2,16 +2,18 @@
   transform: rotate(-90deg);
   align-items: center;
   display: flex;
+  margin-right: -10%;
 }
 
 .bar {
   background: lightslategray;
   width: 100px;
-  height: 1.5px;
+  height: 1px;
 }
 
 .text {
   color: lightslategray;
   margin: 0 10px 0 10px;
   font-size: 12px;
+  width: 100%;
 }
