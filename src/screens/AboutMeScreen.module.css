@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   padding: 5%;
+  position: relative;
 }
 
 .box {
@@ -21,4 +22,29 @@
   color: #707070;
   font-size: 13px;
   line-height: 1.8;
+}
+
+/* Icons container */
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.bar {
+  height: 100px;
+  width: 1.5px;
+  background-color: black;
+  margin-left: 50%;
+}
+
+/* Skillcontainer */
+.skillsContainer {
+  position: relative;
+  padding: 20px;
+  margin-top: 100px;
 }
