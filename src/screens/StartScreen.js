@@ -11,9 +11,12 @@ import styles from "./StartScreen.module.css";
 
 const Background = styled.div`
   background-color: ${COLORS.background};
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
 `;
 
 const Header = styled.h1`
@@ -39,7 +42,8 @@ export default function StartScreen() {
   };
 
   return (
-    <Background>
+    <div className={styles.container}>
+      <Background />
       <Menu value={menuValue} onChange={handleOnChange}>
         <Menu.Item label="Welcome" value="Welcome" />
         <Menu.Item label="Work" value="Work" />
@@ -56,6 +60,6 @@ export default function StartScreen() {
         </Text>
       </div>
       <LinkIcons />
-    </Background>
+    </div>
   );
 }

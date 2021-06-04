@@ -4,12 +4,15 @@
  */
 
 import StartScreen from "./StartScreen";
+import WorkScreen from "./WorkScreen";
 
 // TODO: View ? or div
+// TODO: move to app.js
 export default function MainScreen() {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <StartScreen />
+      <WorkScreen />
     </div>
   );
 }

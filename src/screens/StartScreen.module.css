@@ -3,6 +3,11 @@
   margin-top: 15%;
 }
 
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
 @media screen and (min-width: 901px) {
   .titleContainer {
     margin-left: 20%;
