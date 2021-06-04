@@ -1,0 +1,17 @@
+.container {
+  transform: rotate(-90deg);
+  align-items: center;
+  display: flex;
+}
+
+.bar {
+  background: lightslategray;
+  width: 100px;
+  height: 1.5px;
+}
+
+.text {
+  color: lightslategray;
+  margin: 0 10px 0 10px;
+  font-size: 12px;
+}
