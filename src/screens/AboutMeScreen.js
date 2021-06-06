@@ -40,7 +40,7 @@ export default function AboutMeScreen() {
           </p>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div className={styles.subContainer}>
         <div className={styles.skillsContainer}>
           <SideText label="skills" style={{ left: "-90px", top: "40px" }} />
           <h3>Skills</h3>

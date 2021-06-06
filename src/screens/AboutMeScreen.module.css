@@ -4,6 +4,10 @@
   padding: 5%;
 }
 
+.subContainer {
+  display: flex;
+}
+
 .box {
   width: 45%;
   display: flex;
@@ -58,4 +62,21 @@
   margin-top: 100px;
   width: 40%;
   z-index: -1;
+}
+
+@media screen and (max-width: 901px) {
+  .skillsContainer {
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  .subContainer {
+    display: block;
+    justify-content: center;
+  }
+
+  .box {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20%;
+  }
 }
