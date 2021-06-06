@@ -18,7 +18,7 @@ function LogoItem({ children, title, text, noBar }) {
         {!noBar && <div className={styles.bar} />}
       </div>
       <div className={styles.iconItemText}>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         <p className={styles.p}>{text}</p>
       </div>
     </div>
