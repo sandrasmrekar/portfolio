@@ -5,11 +5,27 @@ import { ReactComponent as JavaIcon } from "../assets/svg/java.svg";
 import { ReactComponent as CsharpIcon } from "../assets/svg/csharp.svg";
 import { ReactComponent as JavascriptIcon } from "../assets/svg/javascript.svg";
 
+function LogoItem({ children, title, text, noBar }) {
+  return (
+    <div className={styles.iconItem}>
+      <div>
+        {children}
+        {!noBar && <div className={styles.bar} />}
+      </div>
+      <div className={styles.iconItemText}>
+        <h3>{title}</h3>
+        <p className={styles.p}>{text}</p>
+      </div>
+    </div>
+  );
+}
+
+// TODO dele upp i fler functioner eller komponenter
 export default function AboutMeScreen() {
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <SideText label="about me" style={{ left: "-50px", top: "120px" }} />
+        <SideText label="about me" style={{ left: "-105px", top: "60px" }} />
         <div className={styles.textContainer}>
           <h3 className={styles.title}>Looking for an awesome collegue</h3>
           <p className={styles.p}>
@@ -19,17 +35,24 @@ export default function AboutMeScreen() {
           </p>
         </div>
       </div>
-      <div className={styles.skillsContainer}>
-        <SideText label="skills" style={{ left: "-90px", top: "40px" }} />
-        <h3>Skills</h3>
-        <div className={styles.iconContainer}>
-          <ReactIcon className={styles.icon} />
-          <div className={styles.bar} />
-          <JavascriptIcon className={styles.icon} />
-          <div className={styles.bar} />
-          <JavaIcon className={styles.icon} />
-          <div className={styles.bar} />
-          <CsharpIcon className={styles.icon} />
+      <div style={{ display: "flex" }}>
+        <div className={styles.skillsContainer}>
+          <SideText label="skills" style={{ left: "-90px", top: "40px" }} />
+          <h3>Skills</h3>
+          <div className={styles.iconContainer}>
+            <LogoItem title="React" text="hdhdhdhdhdhdhdh">
+              <ReactIcon className={styles.icon} />
+            </LogoItem>
+            <LogoItem title="Java Script" text="hdhdhdhdhdhdhdh">
+              <JavascriptIcon className={styles.icon} />
+            </LogoItem>
+            <LogoItem title="Java" text="hdhdhdhdhdhdhdh">
+              <JavaIcon className={styles.icon} />
+            </LogoItem>
+            <LogoItem title="C Sharp" text="hdhdhdhdhdhdhdh" noBar>
+              <CsharpIcon className={styles.icon} />
+            </LogoItem>
+          </div>
         </div>
       </div>
     </div>

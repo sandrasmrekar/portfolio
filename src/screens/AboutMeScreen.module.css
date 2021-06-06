@@ -1,13 +1,13 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 5%;
-  position: relative;
 }
 
 .box {
   width: 45%;
   display: flex;
+  position: relative;
 }
 
 .title {
@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   width: fit-content;
+  margin-top: 20px;
 }
 .icon {
   width: 40px;
@@ -42,9 +43,18 @@
   margin-left: 50%;
 }
 
+.iconItem {
+  display: flex;
+}
+
+.iconItemText {
+  margin: 10px 0 0 30px;
+}
+
 /* Skillcontainer */
 .skillsContainer {
   position: relative;
   padding: 20px;
   margin-top: 100px;
+  width: 50%;
 }
