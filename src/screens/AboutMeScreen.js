@@ -4,6 +4,11 @@ import { ReactComponent as ReactIcon } from "../assets/svg/react.svg";
 import { ReactComponent as JavaIcon } from "../assets/svg/java.svg";
 import { ReactComponent as CsharpIcon } from "../assets/svg/csharp.svg";
 import { ReactComponent as JavascriptIcon } from "../assets/svg/javascript.svg";
+import { ReactComponent as DatabaseIcon } from "../assets/svg/database.svg";
+import { ReactComponent as AgileIcon } from "../assets/svg/agile.svg";
+import { ReactComponent as GitIcon } from "../assets/svg/git.svg";
+
+// TODO: Clean up code, structure it better
 
 function LogoItem({ children, title, text, noBar }) {
   return (
@@ -51,6 +56,22 @@ export default function AboutMeScreen() {
             </LogoItem>
             <LogoItem title="C Sharp" text="hdhdhdhdhdhdhdh" noBar>
               <CsharpIcon className={styles.icon} />
+            </LogoItem>
+          </div>
+        </div>
+
+        <div className={styles.skillsContainer}>
+          <SideText label="skills" style={{ left: "-90px", top: "40px" }} />
+          <h3>Additional knowledge</h3>
+          <div className={styles.iconContainer}>
+            <LogoItem title="Agile development" text="hdhdhdhdhdhdhdh">
+              <AgileIcon className={styles.icon} />
+            </LogoItem>
+            <LogoItem title="Git" text="hdhdhdhdhdhdhdh">
+              <GitIcon className={styles.icon} />
+            </LogoItem>
+            <LogoItem title="Database" text="hdhdhdhdhdhdhdh" noBar>
+              <DatabaseIcon className={styles.icon} />
             </LogoItem>
           </div>
         </div>
