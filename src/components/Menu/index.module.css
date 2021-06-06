@@ -116,5 +116,6 @@
     visibility: hidden;
     height: 0px;
     position: fixed;
+    z-index: 999;
   }
 }
