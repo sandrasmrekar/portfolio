@@ -4,6 +4,7 @@
  */
 
 import AboutMeScreen from "./AboutMeScreen";
+import ConatctMeScreen from "./ContactMeScreen";
 import StartScreen from "./StartScreen";
 import WorkScreen from "./WorkScreen";
 
@@ -15,6 +16,7 @@ export default function MainScreen() {
       <StartScreen />
       <WorkScreen />
       <AboutMeScreen />
+      <ConatctMeScreen />
     </div>
   );
 }

@@ -1,0 +1,59 @@
+.container {
+  min-height: 100vh;
+  padding: 5%;
+  width: 50%;
+}
+
+.p {
+  line-height: 40px;
+  margin-top: 10px;
+}
+
+.small {
+  font-size: 20px;
+}
+
+.formInput {
+  flex-direction: column;
+  margin-top: 20px;
+  display: flex;
+}
+
+.sendBtn {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #6c63ff;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  height: 60px;
+  width: 100%;
+  margin: 15px 0 15px 0;
+
+  font-family: Comfortaa;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 15px 0 15px 0;
+  border-style: none;
+  user-select: none;
+  font-size: 15px;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input {
+  height: 30px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+  font-family: inherit;
+}
