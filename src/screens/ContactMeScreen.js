@@ -10,6 +10,7 @@ export default function ConatctMeScreen() {
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const notificationText = !isError
     ? " Yey! 🙌 Thank you for your email. I will get back to you as soon as possible."
@@ -25,7 +26,7 @@ export default function ConatctMeScreen() {
     setReply_to("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevents default refresh by the browser
     const toSend = {
       from_name,
@@ -35,6 +36,7 @@ export default function ConatctMeScreen() {
     };
 
     // TODOD: make as a service file
+    setLoading(true);
     emailjs
       .send(
         "service_1998",
@@ -47,10 +49,12 @@ export default function ConatctMeScreen() {
           setIsError(false);
           setShow(true);
           handleClearInputs();
+          setLoading(false);
         },
         (error) => {
           setIsError(true);
           setShow(true);
+          setLoading(false);
         }
       );
   };
@@ -95,7 +99,7 @@ export default function ConatctMeScreen() {
           />
         </div>
         <button type="submit" className={styles.sendBtn}>
-          SEND EMAIL
+          {loading ? "Sending..." : "SEND EMAIL"}
         </button>
       </form>
     </div>
