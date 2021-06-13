@@ -14,7 +14,6 @@ const validation = Yup.object().shape({
 export default function ConatctMeScreen() {
   const [isError, setIsError] = useState(false);
   const [show, setShow] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const notificationText = !isError
     ? " Yey! 🙌 Thank you for your email. I will get back to you as soon as possible."
@@ -26,25 +25,23 @@ export default function ConatctMeScreen() {
 
   const handleSubmit = (values) => {
     // TODOD: make as a service file
-    setLoading(true);
-
     emailjs
       .send(
-        "service_1998",
-        "template_bs72nbs",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         values,
-        "user_DLUwt23xcLcD6bRCXfOEw"
+        process.env.REACT_APP_USER_ID
       )
       .then(
         (result) => {
           setIsError(false);
           setShow(true);
-          setLoading(false);
+          formik.setSubmitting(false);
         },
         (error) => {
           setIsError(true);
           setShow(true);
-          setLoading(false);
+          formik.setSubmitting(false);
         }
       );
   };
@@ -57,8 +54,10 @@ export default function ConatctMeScreen() {
       reply_to: "",
     },
     validationSchema: validation,
+
     onSubmit: (values) => {
       handleSubmit(values);
+
       formik.setValues({
         from_name: "",
         to_name: "Sandra",
@@ -91,7 +90,7 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.from_name && (
+        {formik.errors.from_name && formik.touched.from_name && (
           <p className={styles.errorMessage}>{formik.errors.from_name}</p>
         )}
         <div className={styles.formInput}>
@@ -104,7 +103,7 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.reply_to && (
+        {formik.errors.reply_to && formik.touched.reply_to && (
           <p className={styles.errorMessage}>{formik.errors.reply_to}</p>
         )}
         <div className={styles.formInput}>
@@ -117,11 +116,11 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.message && (
+        {formik.errors.message && formik.touched.message && (
           <p className={styles.errorMessage}>{formik.errors.message}</p>
         )}
         <button type="submit" className={styles.sendBtn}>
-          {loading ? "Sending..." : "SEND EMAIL"}
+          {formik.isSubmitting ? "Sending..." : "SEND EMAIL"}
         </button>
       </form>
     </div>
