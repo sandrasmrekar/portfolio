@@ -1,13 +1,17 @@
 import emailjs from "emailjs-com";
 import { useState } from "react";
-import DeleteButton from "../components/CloseButton";
 import Notification from "../components/Notification";
 import styles from "./ContactMeScreen.module.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
+const validation = Yup.object().shape({
+  from_name: Yup.string().required("Required"),
+  message: Yup.string().required("Required"),
+  reply_to: Yup.string().email("Invalid email").required("Required"),
+});
 
 export default function ConatctMeScreen() {
-  const [from_name, setFrom_Name] = useState("");
-  const [reply_to, setReply_to] = useState("");
-  const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -20,35 +24,21 @@ export default function ConatctMeScreen() {
     setShow(false);
   };
 
-  const handleClearInputs = () => {
-    setFrom_Name("");
-    setMessage("");
-    setReply_to("");
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevents default refresh by the browser
-    const toSend = {
-      from_name,
-      to_name: "Sandra",
-      message,
-      reply_to,
-    };
-
+  const handleSubmit = (values) => {
     // TODOD: make as a service file
     setLoading(true);
+
     emailjs
       .send(
         "service_1998",
         "template_bs72nbs",
-        toSend,
+        values,
         "user_DLUwt23xcLcD6bRCXfOEw"
       )
       .then(
         (result) => {
           setIsError(false);
           setShow(true);
-          handleClearInputs();
           setLoading(false);
         },
         (error) => {
@@ -58,6 +48,25 @@ export default function ConatctMeScreen() {
         }
       );
   };
+
+  const formik = useFormik({
+    initialValues: {
+      from_name: "",
+      to_name: "Sandra",
+      message: "",
+      reply_to: "",
+    },
+    validationSchema: validation,
+    onSubmit: (values) => {
+      handleSubmit(values);
+      formik.setValues({
+        from_name: "",
+        to_name: "Sandra",
+        message: "",
+        reply_to: "",
+      });
+    },
+  });
 
   return (
     <div className={styles.container}>
@@ -71,33 +80,46 @@ export default function ConatctMeScreen() {
         I would love to here from you and tell more about myself and my journey.
         Send me an email down below.
       </p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
         <div className={styles.formInput}>
-          <label for="from_name">NAME</label>
+          <label htmlFor="from_name">NAME</label>
           <input
             id="from_name"
+            name="from_name"
             type="text"
-            value={from_name}
-            onChange={(e) => setFrom_Name(e.target.value)}
+            value={formik.values.from_name}
+            onChange={formik.handleChange}
           />
         </div>
+        {formik.errors.from_name && (
+          <p className={styles.errorMessage}>{formik.errors.from_name}</p>
+        )}
         <div className={styles.formInput}>
-          <label for="reply_to">EMAIL</label>
+          <label htmlFor="reply_to">EMAIL</label>
           <input
             id="reply_to"
+            name="reply_to"
             type="reply_to"
-            value={reply_to}
-            onChange={(e) => setReply_to(e.target.value)}
+            value={formik.values.reply_to}
+            onChange={formik.handleChange}
           />
         </div>
+        {formik.errors.reply_to && (
+          <p className={styles.errorMessage}>{formik.errors.reply_to}</p>
+        )}
         <div className={styles.formInput}>
-          <label for="message">MESSAGE</label>
+          <label htmlFor="message">MESSAGE</label>
           <textarea
             id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            name="message"
+            type="text"
+            value={formik.values.message}
+            onChange={formik.handleChange}
           />
         </div>
+        {formik.errors.message && (
+          <p className={styles.errorMessage}>{formik.errors.message}</p>
+        )}
         <button type="submit" className={styles.sendBtn}>
           {loading ? "Sending..." : "SEND EMAIL"}
         </button>
