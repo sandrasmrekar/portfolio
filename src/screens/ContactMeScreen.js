@@ -1,11 +1,18 @@
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import DeleteButton from "../components/CloseButton";
 import styles from "./ContactMeScreen.module.css";
 
 export default function ConatctMeScreen() {
-  const [from_name, setName] = useState("");
-  const [reply_to, setEmail] = useState("");
+  const [from_name, setFrom_Name] = useState("");
+  const [reply_to, setReply_to] = useState("");
   const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleCloseNotification = () => {
+    setShow(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevents default refresh by the browser
@@ -26,16 +33,30 @@ export default function ConatctMeScreen() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setIsError(false);
+          setShow(true);
         },
         (error) => {
-          console.log(error.text);
+          setIsError(true);
+          setShow(true);
         }
       );
   };
 
   return (
     <div className={styles.container}>
+      <div className={show ? styles.showNotification : styles.hideNotification}>
+        {isError && (
+          <p className={styles.small}>Oops... Something went wrong. </p>
+        )}
+        {!isError && (
+          <p className={styles.small}>
+            Yey! 🙌 Thank you for your email. I will get back to you as soon as
+            possible.
+          </p>
+        )}
+        <DeleteButton onClick={handleCloseNotification} />
+      </div>
       <h3>Contact me</h3>
       <p className={styles.p}>
         I would love to here from you and tell more about myself and my journey.
@@ -48,7 +69,7 @@ export default function ConatctMeScreen() {
             id="from_name"
             type="text"
             value={from_name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setFrom_Name(e.target.value)}
           />
         </div>
         <div className={styles.formInput}>
@@ -57,7 +78,7 @@ export default function ConatctMeScreen() {
             id="reply_to"
             type="reply_to"
             value={reply_to}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setReply_to(e.target.value)}
           />
         </div>
         <div className={styles.formInput}>
