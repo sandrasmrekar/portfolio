@@ -25,6 +25,7 @@ export default function ConatctMeScreen() {
 
   const handleSubmit = (values) => {
     // TODOD: make as a service file
+
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID,
@@ -37,6 +38,7 @@ export default function ConatctMeScreen() {
           setIsError(false);
           setShow(true);
           formik.setSubmitting(false);
+          formik.resetForm();
         },
         (error) => {
           setIsError(true);
@@ -57,13 +59,6 @@ export default function ConatctMeScreen() {
 
     onSubmit: (values) => {
       handleSubmit(values);
-
-      formik.setValues({
-        from_name: "",
-        to_name: "Sandra",
-        message: "",
-        reply_to: "",
-      });
     },
   });
 
@@ -90,7 +85,7 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.from_name && formik.touched.from_name && (
+        {formik.errors.from_name && (
           <p className={styles.errorMessage}>{formik.errors.from_name}</p>
         )}
         <div className={styles.formInput}>
@@ -103,7 +98,7 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.reply_to && formik.touched.reply_to && (
+        {formik.errors.reply_to && (
           <p className={styles.errorMessage}>{formik.errors.reply_to}</p>
         )}
         <div className={styles.formInput}>
@@ -116,7 +111,7 @@ export default function ConatctMeScreen() {
             onChange={formik.handleChange}
           />
         </div>
-        {formik.errors.message && formik.touched.message && (
+        {formik.errors.message && (
           <p className={styles.errorMessage}>{formik.errors.message}</p>
         )}
         <button type="submit" className={styles.sendBtn}>
