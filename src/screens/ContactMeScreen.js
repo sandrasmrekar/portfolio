@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
 import { useState } from "react";
 import DeleteButton from "../components/CloseButton";
+import Notification from "../components/Notification";
 import styles from "./ContactMeScreen.module.css";
 
 export default function ConatctMeScreen() {
@@ -10,8 +11,18 @@ export default function ConatctMeScreen() {
   const [isError, setIsError] = useState(false);
   const [show, setShow] = useState(false);
 
+  const notificationText = !isError
+    ? " Yey! 🙌 Thank you for your email. I will get back to you as soon as possible."
+    : "Opps... something went wrong";
+
   const handleCloseNotification = () => {
     setShow(false);
+  };
+
+  const handleClearInputs = () => {
+    setFrom_Name("");
+    setMessage("");
+    setReply_to("");
   };
 
   const handleSubmit = (e) => {
@@ -35,6 +46,7 @@ export default function ConatctMeScreen() {
         (result) => {
           setIsError(false);
           setShow(true);
+          handleClearInputs();
         },
         (error) => {
           setIsError(true);
@@ -45,18 +57,11 @@ export default function ConatctMeScreen() {
 
   return (
     <div className={styles.container}>
-      <div className={show ? styles.showNotification : styles.hideNotification}>
-        {isError && (
-          <p className={styles.small}>Oops... Something went wrong. </p>
-        )}
-        {!isError && (
-          <p className={styles.small}>
-            Yey! 🙌 Thank you for your email. I will get back to you as soon as
-            possible.
-          </p>
-        )}
-        <DeleteButton onClick={handleCloseNotification} />
-      </div>
+      <Notification
+        show={show}
+        onClose={handleCloseNotification}
+        message={notificationText}
+      />
       <h3>Contact me</h3>
       <p className={styles.p}>
         I would love to here from you and tell more about myself and my journey.
