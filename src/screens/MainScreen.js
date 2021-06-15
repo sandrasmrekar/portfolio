@@ -19,7 +19,7 @@ import {
 } from "../constants/sections";
 
 export default function MainScreen() {
-  const [menuValue, setMenuValue] = useState("StartSection");
+  const [menuValue, setMenuValue] = useState(START_SECTION);
 
   const handleOnChange = (value) => {
     const element = document.getElementById(value);

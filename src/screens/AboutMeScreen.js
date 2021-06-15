@@ -7,6 +7,7 @@ import { ReactComponent as JavascriptIcon } from "../assets/svg/javascript.svg";
 import { ReactComponent as DatabaseIcon } from "../assets/svg/database.svg";
 import { ReactComponent as AgileIcon } from "../assets/svg/agile.svg";
 import { ReactComponent as GitIcon } from "../assets/svg/git.svg";
+import { ABOUT_ME_SECTION } from "../constants/sections";
 
 // TODO: Clean up code, structure it better
 
@@ -28,7 +29,7 @@ function LogoItem({ children, title, text, noBar }) {
 // TODO dele upp i fler functioner eller komponenter
 export default function AboutMeScreen() {
   return (
-    <div id="AboutMeSection" className={styles.container}>
+    <div id={ABOUT_ME_SECTION} className={styles.container}>
       <div className={styles.box}>
         <SideText label="about me" style={{ left: "-105px", top: "60px" }} />
         <div className={styles.textContainer}>
