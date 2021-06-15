@@ -22,13 +22,12 @@ export default function StartScreen() {
   });
 
   const handleScroll = (e) => {
-    if (y > window.scrollY && window.scrollY < 40) {
+    if (y > window.scrollY && window.scrollY < 40 && linksElement) {
       // Scrolling upp
-
       setClassNameBackground(styles.background);
       linksElement.style.right = "40px";
       linksElement.style.bottom = "40px";
-    } else if (y < window.scrollY && window.scrollY > 20) {
+    } else if (y < window.scrollY && window.scrollY > 20 && linksElement) {
       // Scrolling down
       setClassNameBackground(styles.backgroundScroll);
       linksElement.style.right = "60px";
