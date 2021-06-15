@@ -8,6 +8,33 @@
   width: 100vw;
 }
 
+.background {
+  background-color: #131313;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.header {
+  color: white;
+}
+
+.SubHeader {
+  color: #9b9b9b;
+}
+
+.text {
+  color: #9b9b9b;
+  margin: 10px 0 10px 0;
+}
+
+.smallText {
+  color: #8982ff;
+}
+
 @media screen and (min-width: 901px) {
   .titleContainer {
     margin-top: 15%;

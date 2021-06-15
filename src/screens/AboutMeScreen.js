@@ -28,7 +28,7 @@ function LogoItem({ children, title, text, noBar }) {
 // TODO dele upp i fler functioner eller komponenter
 export default function AboutMeScreen() {
   return (
-    <div className={styles.container}>
+    <div id="AboutMeSection" className={styles.container}>
       <div className={styles.box}>
         <SideText label="about me" style={{ left: "-105px", top: "60px" }} />
         <div className={styles.textContainer}>

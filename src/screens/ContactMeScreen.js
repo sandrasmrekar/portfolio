@@ -63,7 +63,7 @@ export default function ConatctMeScreen() {
   });
 
   return (
-    <div className={styles.container}>
+    <div id="ContactSection" className={styles.container}>
       <Notification
         show={show}
         onClose={handleCloseNotification}
