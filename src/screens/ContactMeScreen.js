@@ -62,7 +62,6 @@ export default function ConatctMeScreen() {
       handleSubmit(values);
     },
   });
-
   return (
     <div id={CONTACT_SECTION} className={styles.container}>
       <Notification

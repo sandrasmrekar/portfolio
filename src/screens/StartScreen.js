@@ -34,8 +34,8 @@ export default function StartScreen() {
       linksElement.style.bottom = "70px";
     }
     setY(window.scrollY);
-    console.log(styles.background);
   };
+
   return (
     <div id={START_SECTION} className={styles.container}>
       <div className={classNameBackground} />
