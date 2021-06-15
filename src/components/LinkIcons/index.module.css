@@ -16,4 +16,12 @@
   position: absolute;
   right: 40px;
   bottom: 40px;
+  transition: all 300ms ease-in-out;
+}
+
+.containerScroll {
+  position: absolute;
+  right: 60px;
+  bottom: 70px;
+  transition: all 300ms ease-in-out;
 }

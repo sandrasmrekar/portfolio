@@ -8,8 +8,11 @@ import { START_SECTION } from "../constants/sections";
 import styles from "./StartScreen.module.css";
 
 export default function StartScreen() {
+  const linksElement = document.getElementById("links");
   const [y, setY] = useState(window.scrollY);
-  const backgroundElement = document.getElementById("background");
+  const [classNameBackground, setClassNameBackground] = useState(
+    styles.background
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -21,22 +24,22 @@ export default function StartScreen() {
   const handleScroll = (e) => {
     if (y > window.scrollY && window.scrollY < 40) {
       // Scrolling upp
-      backgroundElement.style.right = "0px";
-      backgroundElement.style.left = "0px";
-      backgroundElement.style.top = "0px";
-      backgroundElement.style.bottom = "0px";
+
+      setClassNameBackground(styles.background);
+      linksElement.style.right = "40px";
+      linksElement.style.bottom = "40px";
     } else if (y < window.scrollY && window.scrollY > 20) {
       // Scrolling down
-      backgroundElement.style.right = "50px";
-      backgroundElement.style.left = "50px";
-      backgroundElement.style.top = "50px";
-      backgroundElement.style.bottom = "50px";
+      setClassNameBackground(styles.backgroundScroll);
+      linksElement.style.right = "60px";
+      linksElement.style.bottom = "70px";
     }
     setY(window.scrollY);
+    console.log(styles.background);
   };
   return (
     <div id={START_SECTION} className={styles.container}>
-      <div id="background" className={styles.background} />
+      <div className={classNameBackground} />
       <div className={styles.titleContainer}>
         <p className={styles.smallText}>Hi I'm </p>
         <h1 className={styles.header}>SANDRA SMREKAR</h1>

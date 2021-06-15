@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 
 export default function LinkIcons() {
   return (
-    <div className={styles.container}>
+    <div id="links" className={styles.container}>
       <a href=" ">
         <EmailSvg className={styles.icon} />
       </a>
