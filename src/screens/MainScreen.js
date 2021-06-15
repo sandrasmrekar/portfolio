@@ -11,6 +11,12 @@ import AboutMeScreen from "./AboutMeScreen";
 import StartScreen from "./StartScreen";
 import Menu from "../components/Menu";
 import WorkScreen from "./WorkScreen";
+import {
+  ABOUT_ME_SECTION,
+  CONTACT_SECTION,
+  START_SECTION,
+  WORK_SECTION,
+} from "../constants/sections";
 
 export default function MainScreen() {
   const [menuValue, setMenuValue] = useState("StartSection");
@@ -30,10 +36,10 @@ export default function MainScreen() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <Menu value={menuValue} onChange={handleOnChange}>
-        <Menu.Item label="Welcome" value="StartSection" />
-        <Menu.Item label="Work" value="WorkSection" />
-        <Menu.Item label="About me" value="AboutMeSection" />
-        <Menu.Item label="Contact" value="ContactSection" />
+        <Menu.Item label="Welcome" value={START_SECTION} />
+        <Menu.Item label="Work" value={WORK_SECTION} />
+        <Menu.Item label="About me" value={ABOUT_ME_SECTION} />
+        <Menu.Item label="Contact" value={CONTACT_SECTION} />
       </Menu>
       <StartScreen />
       <WorkScreen />
