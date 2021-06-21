@@ -1,0 +1,51 @@
+.container {
+  margin-bottom: 10%;
+  cursor: pointer;
+  column-rule-color: thistle;
+}
+
+.container:hover .header {
+  background-position: left bottom;
+}
+
+.headerContainer {
+  display: flex;
+}
+
+.header {
+  font-family: Monoton;
+  color: #e4e4e4;
+  margin: 0 30px 0 0;
+  background: linear-gradient(to right, #8982ff 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+
+.subHeader {
+  font-size: 35px;
+}
+
+.text {
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.link {
+  margin: 0 10px 0 10px;
+  color: #8982ff;
+  font-size: 20px;
+  display: inline;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

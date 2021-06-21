@@ -2,7 +2,6 @@ import SideText from "../components/SideText";
 import styles from "./AboutMeScreen.module.css";
 import { ReactComponent as ReactIcon } from "../assets/svg/react.svg";
 import { ReactComponent as JavaIcon } from "../assets/svg/java.svg";
-import { ReactComponent as CsharpIcon } from "../assets/svg/csharp.svg";
 import { ReactComponent as JavascriptIcon } from "../assets/svg/javascript.svg";
 import { ReactComponent as DatabaseIcon } from "../assets/svg/database.svg";
 import { ReactComponent as AgileIcon } from "../assets/svg/agile.svg";
