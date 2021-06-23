@@ -13,18 +13,22 @@
     height: 100%;
     transform: translateY(0%);
     transition: transform 200ms ease-in-out;
-    position: absolute;
-    background-color: #131313;
     position: fixed;
+    background-color: #131313;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
   .containerHide {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     transform: translateY(-100%);
     transition: transform 200ms ease-in-out;
     background-color: #131313;
-    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
   }
 
   .showButton {
@@ -41,7 +45,6 @@
   }
 
   .menuItem {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin: 35px;
