@@ -1,11 +1,12 @@
 .titleContainer {
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   margin-top: 15%;
 }
 
 .container {
   height: 100vh;
-  width: 100vw;
 }
 
 .background {
@@ -49,8 +50,9 @@
   color: #8982ff;
 }
 
-@media screen and (min-width: 901px) {
+/* @media screen and (min-width: 901px) {
   .titleContainer {
     margin-top: 15%;
+    background-color: #8982ff;
   }
-}
+} */
