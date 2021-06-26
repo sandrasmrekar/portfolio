@@ -1,0 +1,12 @@
+.bubble {
+  background-color: #dfdfdf;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 2px 20px 2px 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.blue {
+  color: #6c63ff;
+}

@@ -17,9 +17,11 @@ h4 {
   margin: 0;
 }
 
-p {
+p,
+a {
   font-size: 15px;
   margin: 0;
+  line-height: 40px;
 }
 
 @media screen and (min-width: 1400px) {
@@ -38,7 +40,8 @@ p {
     margin: 0;
   }
 
-  p {
-    font-size: 25px;
+  p,
+  a {
+    font-size: 20px;
   }
 }

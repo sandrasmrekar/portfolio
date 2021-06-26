@@ -1,5 +1,5 @@
 import "./App.css";
-import "./styles/typography.css";
+import "./constants/typography.css";
 import MainScreen from "./screens/MainScreen";
 
 function App() {

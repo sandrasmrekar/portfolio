@@ -1,82 +1,48 @@
 .container {
-  width: 100%;
-  padding: 5%;
+  width: 80%;
+  padding: 10%;
   min-height: 100vh;
+  position: relative;
 }
 
 .subContainer {
-  display: flex;
+  width: 50%;
+  margin-bottom: 10%;
 }
 
-.box {
-  width: 45%;
-  display: flex;
-  position: relative;
+.header {
+  margin-bottom: 20px;
 }
 
-.title {
-  margin: 0 0 10px 0;
+.blue {
+  color: #6c63ff;
+  display: inline;
 }
 
-.textContainer {
-  padding: 20px;
-}
-
-.p {
-  color: #707070;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* Icons container */
-
-.iconContainer {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin-top: 20px;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-}
-.bar {
-  height: 100px;
-  width: 1.5px;
-  background-color: black;
-  margin-left: 50%;
-}
-
-.iconItem {
-  display: flex;
-}
-
-.iconItemText {
-  margin: 10px 0 0 30px;
-}
-
-/* Skillcontainer */
-.skillsContainer {
-  position: relative;
-  padding: 20px;
-  margin-top: 100px;
-  width: 40%;
+.logo {
+  position: absolute;
   z-index: -1;
+  top: 0;
+  right: 15%;
 }
 
-@media screen and (max-width: 901px) {
-  .skillsContainer {
-    margin: auto;
-    margin-bottom: 5%;
+@media screen and (max-width: 2400px) {
+  .logo {
+    width: 50%;
+    height: 50%;
+    top: 10%;
+    right: 0;
   }
-  .subContainer {
-    display: block;
-    justify-content: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .logo {
+    width: 40%;
+    height: 40%;
+    top: 10%;
   }
 
-  .box {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20%;
+  .subContainer {
+    width: 100%;
   }
 }
