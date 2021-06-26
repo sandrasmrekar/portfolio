@@ -5,15 +5,6 @@
   margin: auto;
 }
 
-.p {
-  line-height: 40px;
-  margin-top: 10px;
-}
-
-.small {
-  font-size: 20px;
-}
-
 .errorMessage {
   color: red;
   font-size: 15px;

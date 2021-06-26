@@ -70,7 +70,7 @@ export default function ConatctMeScreen() {
         message={notificationText}
       />
       <h3>Contact me</h3>
-      <p className={styles.p}>
+      <p>
         I would love to here from you and tell more about myself and my journey.
         Send me an email down below.
       </p>
