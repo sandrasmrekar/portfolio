@@ -1,8 +1,8 @@
 .titleContainer {
-  margin-left: auto;
   margin-right: auto;
-  width: fit-content;
+  margin-left: auto;
   margin-top: 15%;
+  width: 80%;
 }
 
 .container {

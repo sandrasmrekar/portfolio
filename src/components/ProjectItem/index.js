@@ -19,7 +19,7 @@ function Header({ label, number }) {
 }
 
 function SubHeader({ label }) {
-  return <h2 className={styles.subHeader}>{label}</h2>;
+  return <h2>{label}</h2>;
 }
 
 function Text({ text, link }) {
