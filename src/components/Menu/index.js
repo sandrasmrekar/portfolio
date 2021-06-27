@@ -15,6 +15,7 @@ export default function Menu({ value, onChange, children }) {
       onChange(value);
     }
   };
+
   return (
     <div>
       <div onClick={handleHamburgerClick} className={styles.hamburger}>

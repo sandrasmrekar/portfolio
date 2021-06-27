@@ -8,9 +8,9 @@ export default function AboutMeScreen() {
   return (
     <div id={ABOUT_ME_SECTION} className={styles.container}>
       <div className={styles.subContainer}>
-        <h2 className={styles.header}>
-          About <h2 className={styles.blue}>Me</h2>
-        </h2>
+        <h1 className={styles.header}>
+          About <h1 className={styles.blue}>Me</h1>
+        </h1>
         <p>
           Software engineer with a lot of passion for buildng cool stuff.
           Studying Computer science and application development in Malmö Sweden,
