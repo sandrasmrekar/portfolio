@@ -46,9 +46,9 @@ function Item({ label, value }) {
         <div className={styles.bar} />
       )}
       {value === menu.value ? (
-        <h3 className={styles.textActive}>{label}</h3>
+        <h2 className={styles.textActive}>{label}</h2>
       ) : (
-        <h4 className={styles.text}>{label}</h4>
+        <h3 className={styles.text}>{label}</h3>
       )}
     </div>
   );
