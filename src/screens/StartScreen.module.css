@@ -2,7 +2,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 15%;
-  width: 80%;
+  width: 100%;
 }
 
 .container {
@@ -35,6 +35,7 @@
 
 .white {
   color: white;
+  margin-bottom: 5px;
 }
 
 .grey {
@@ -48,4 +49,14 @@
 
 .blue {
   color: #8982ff;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  .titleContainer {
+    margin-top: 50%;
+  }
 }

@@ -45,11 +45,15 @@
   .subContainer {
     width: 100%;
   }
+
+  .logo {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 100%;
   }
 
   .subContainer {

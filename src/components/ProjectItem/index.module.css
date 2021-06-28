@@ -10,13 +10,14 @@
 
 .headerContainer {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .header {
   padding: 15px 0 15px 0;
   font-family: Monoton;
   color: #e4e4e4;
-  margin: 0 30px 0 0;
+  margin: 0 20px 0 0;
   background: linear-gradient(to right, #8982ff 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
