@@ -30,8 +30,8 @@ export default function StartScreen() {
     } else if (y < window.scrollY && window.scrollY > 20 && linksElement) {
       // Scrolling down
       setClassNameBackground(styles.backgroundScroll);
-      linksElement.style.right = "60px";
-      linksElement.style.bottom = "70px";
+      linksElement.style.right = "8%";
+      linksElement.style.bottom = "8%";
     }
     setY(window.scrollY);
   };

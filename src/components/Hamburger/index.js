@@ -19,7 +19,7 @@ export default function Hamburger({ open }) {
       hamburger.style.transitionDuration = "300ms";
     } else if (y < window.scrollY && window.scrollY > 20 && hamburger) {
       // Scrolling down
-      hamburger.style.right = "40px";
+      hamburger.style.right = "50%";
       hamburger.style.transitionDuration = "300ms";
     }
     setY(window.scrollY);
