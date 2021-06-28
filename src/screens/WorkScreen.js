@@ -8,8 +8,8 @@ export default function WorkScreen() {
   return (
     <div id={WORK_SECTION} className={styles.container}>
       <ProductItem>
-        <ProductItem.Header label="E-commerce" number="01" />
-        <ProductItem.SubHeader label="01 E-commerce" />
+        <ProductItem.Header label="Green" number="01" />
+        <ProductItem.SubHeader label="01 Green" />
         <ProductItem.Text
           text={text}
           link="https://github.com/sandrasmrekar/green-ecommerce"
