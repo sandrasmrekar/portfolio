@@ -13,6 +13,7 @@ export default function Menu({ value, onChange, children }) {
   const handleOnChange = (value) => {
     if (onChange) {
       onChange(value);
+      setShow(false);
     }
   };
 
