@@ -75,27 +75,26 @@
   .menuItem {
     transform: translateY(-5px);
     transition: transform 200ms ease-in-out;
-    width: 50px;
+    width: 60px;
     cursor: pointer;
   }
 
   .text {
     text-align: right;
-    margin-left: -50%;
-    margin-top: 60px;
-    width: 100px;
+    margin-left: -70%;
+    margin-top: 80px;
+    width: 150px;
     color: #9b9b9b;
     transform: rotate(-90deg);
   }
 
   .textActive {
     text-align: right;
-    margin-left: -50%;
     color: #8982ff;
     transform: rotate(-90deg);
     margin-top: 150px;
     width: 200px;
-    margin-left: -150%;
+    margin-left: -120%;
   }
 
   .bar {
