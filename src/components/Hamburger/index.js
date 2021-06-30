@@ -25,7 +25,7 @@ export default function Hamburger({ open }) {
     setY(window.scrollY);
   };
   return (
-    <div className={open ? styles.open : ""} id={styles.navicon3}>
+    <div className={open ? styles.open : styles.closed} id={styles.navicon3}>
       <span></span>
       <span></span>
       <span></span>
