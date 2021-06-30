@@ -1,7 +1,7 @@
 import ProductItem from "../components/ProjectItem";
 import { WORK_SECTION } from "../constants/sections";
 import styles from "./WorkScreen.module.css";
-// TODO: Visa projekt på ett snyggt sätt, kanske bildspel eller använda nummer sidomenu som finns på figma.
+
 export default function WorkScreen() {
   const ecommerceText =
     "This is a e-commerce website that I did as a project to learn more about building with MERN stack, Mongo, E, React and Node.";
