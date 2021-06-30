@@ -1,14 +1,14 @@
 .container {
-  min-height: 100vh;
-  width: 80%;
-  position: relative;
-  margin: auto;
   padding-bottom: 10%;
+  position: relative;
+  min-height: 100vh;
+  margin: auto;
+  width: 80%;
 }
 
 .errorMessage {
-  color: red;
   font-size: 15px;
+  color: red;
 }
 
 .formInput {
