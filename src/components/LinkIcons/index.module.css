@@ -13,10 +13,11 @@
 }
 
 .container {
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
   transition: all 300ms ease-in-out;
+  position: absolute;
+  display: flex;
+  bottom: 40px;
+  right: 40px;
 }
 
 .containerScroll {
