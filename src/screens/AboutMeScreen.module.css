@@ -12,13 +12,16 @@
   margin-bottom: 10%;
 }
 
+.titleContainer {
+  display: flex;
+}
+
 .header {
   margin-bottom: 20px;
 }
 
 .blue {
   color: #6c63ff;
-  display: inline;
 }
 
 .logo {

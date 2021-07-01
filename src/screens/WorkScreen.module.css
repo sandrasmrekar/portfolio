@@ -7,9 +7,9 @@
 
 .titleContainer {
   margin-bottom: 5%;
+  display: flex;
 }
 
 .blue {
   color: #6c63ff;
-  display: inline;
 }

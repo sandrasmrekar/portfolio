@@ -15,9 +15,8 @@ export default function WorkScreen() {
   return (
     <div id={WORK_SECTION} className={styles.container}>
       <div className={styles.titleContainer}>
-        <h1>
-          MY <h1 className={styles.blue}>PROJECTS</h1>
-        </h1>
+        <h1>MY</h1>
+        <h1 className={styles.blue}>PROJECTS</h1>
       </div>
 
       <ProductItem>
@@ -29,7 +28,7 @@ export default function WorkScreen() {
         />
       </ProductItem>
 
-      <ProductItem linkTo="https://sandrasmrekar.github.io/sorting-algorithms/">
+      <ProductItem>
         <ProductItem.Header label="Algorithms" number="02" />
         <ProductItem.SubHeader label="02 Algorithms" />
         <ProductItem.Text

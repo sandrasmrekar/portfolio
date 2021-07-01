@@ -1,10 +1,10 @@
 import styles from "./index.module.css";
 // context for counting
 
-export default function ProductItem({ children, linkTo }) {
+export default function ProductItem({ children }) {
   return (
     <div className={styles.container}>
-      <a href={linkTo}>{children}</a>
+      <div>{children}</div>
     </div>
   );
 }
