@@ -4,7 +4,7 @@
  */
 
 import { animateScroll } from "../services/scrollAnimation";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import ConatctMeScreen from "./ContactMeScreen";
 import AboutMeScreen from "./AboutMeScreen";
@@ -17,15 +17,25 @@ import {
   START_SECTION,
   WORK_SECTION,
 } from "../constants/sections";
+import { currentSection } from "../services/currentSection";
 
 export default function MainScreen() {
   const [menuValue, setMenuValue] = useState(START_SECTION);
 
+  const handleOnScroll = useCallback(() => {
+    setMenuValue(currentSection());
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleOnScroll);
+    return () => {
+      window.removeEventListener("scroll", handleOnScroll);
+    };
+  }, [handleOnScroll]);
+
   const handleOnChange = (value) => {
     const element = document.getElementById(value);
     const currentPosition = window.scrollY;
-
-    setMenuValue(value);
     animateScroll({
       targetPosition: element.offsetTop,
       initialPosition: currentPosition,
