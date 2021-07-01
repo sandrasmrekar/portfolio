@@ -1,8 +1,9 @@
 .container {
   width: 80%;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   margin: auto;
+  margin-top: 10%;
 }
 
 .subContainer {
@@ -22,32 +23,15 @@
 .logo {
   position: absolute;
   z-index: -1;
-  top: 0;
-  right: 15%;
-}
-
-@media screen and (max-width: 2400px) {
-  .logo {
-    width: 50%;
-    height: 50%;
-    top: 10%;
-    right: 0;
-  }
+  top: -10%;
+  right: -25%;
+  left: -25%;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1400px) {
-  .logo {
-    width: 40%;
-    height: 40%;
-    top: 10%;
-  }
-
   .subContainer {
     width: 100%;
-  }
-
-  .logo {
-    visibility: hidden;
   }
 }
 

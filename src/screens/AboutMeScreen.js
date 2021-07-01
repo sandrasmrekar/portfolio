@@ -1,5 +1,5 @@
 import styles from "./AboutMeScreen.module.css";
-import { ReactComponent as GirlLogo } from "../assets/svg/girlLogo.svg";
+import { ReactComponent as Background } from "../assets/svg/abstractBackground.svg";
 
 import { ABOUT_ME_SECTION } from "../constants/sections";
 import { Bubble } from "../components/Bubble";
@@ -30,7 +30,9 @@ export default function AboutMeScreen() {
           <Bubble label="Agile development" />
         </div>
       </div>
-      <GirlLogo className={styles.logo} />
+      <div className={styles.logo}>
+        <Background />
+      </div>
     </div>
   );
 }

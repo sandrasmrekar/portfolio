@@ -18,7 +18,6 @@ export default function WorkScreen() {
         <h1>
           MY <h1 className={styles.blue}>PROJECTS</h1>
         </h1>
-        <p>These are some of the projects I have been working on. </p>
       </div>
 
       <ProductItem>
