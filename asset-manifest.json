@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2f1954e8.chunk.css",
-    "main.js": "/portfolio/static/js/main.c3b8afab.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c3b8afab.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.2a22cab2.chunk.css",
+    "main.js": "/portfolio/static/js/main.35311f55.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.35311f55.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.cc55fd1d.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.cc55fd1d.js.map",
-    "static/js/2.e13b4fe6.chunk.js": "/portfolio/static/js/2.e13b4fe6.chunk.js",
-    "static/js/2.e13b4fe6.chunk.js.map": "/portfolio/static/js/2.e13b4fe6.chunk.js.map",
+    "static/js/2.029a598c.chunk.js": "/portfolio/static/js/2.029a598c.chunk.js",
+    "static/js/2.029a598c.chunk.js.map": "/portfolio/static/js/2.029a598c.chunk.js.map",
     "static/js/3.a70f42c4.chunk.js": "/portfolio/static/js/3.a70f42c4.chunk.js",
     "static/js/3.a70f42c4.chunk.js.map": "/portfolio/static/js/3.a70f42c4.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.2f1954e8.chunk.css.map": "/portfolio/static/css/main.2f1954e8.chunk.css.map",
-    "static/js/2.e13b4fe6.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e13b4fe6.chunk.js.LICENSE.txt",
+    "static/css/main.2a22cab2.chunk.css.map": "/portfolio/static/css/main.2a22cab2.chunk.css.map",
+    "static/js/2.029a598c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.029a598c.chunk.js.LICENSE.txt",
+    "static/media/abstractBackground.80f7880c.svg": "/portfolio/static/media/abstractBackground.80f7880c.svg",
     "static/media/delete.32731db7.svg": "/portfolio/static/media/delete.32731db7.svg",
     "static/media/email.3786f5ff.svg": "/portfolio/static/media/email.3786f5ff.svg",
-    "static/media/girlLogo.2ccb2156.svg": "/portfolio/static/media/girlLogo.2ccb2156.svg",
     "static/media/github.9d665e98.svg": "/portfolio/static/media/github.9d665e98.svg",
     "static/media/linkedIn.ed777c27.svg": "/portfolio/static/media/linkedIn.ed777c27.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.cc55fd1d.js",
-    "static/js/2.e13b4fe6.chunk.js",
-    "static/css/main.2f1954e8.chunk.css",
-    "static/js/main.c3b8afab.chunk.js"
+    "static/js/2.029a598c.chunk.js",
+    "static/css/main.2a22cab2.chunk.css",
+    "static/js/main.35311f55.chunk.js"
   ]
 }
