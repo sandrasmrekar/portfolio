@@ -15,8 +15,10 @@ export default function WorkScreen() {
   return (
     <div id={WORK_SECTION} className={styles.container}>
       <div className={styles.titleContainer}>
-        <h1>My Projects</h1>
-        <p>These are some of the projects I have been working on.</p>
+        <h1>
+          MY <h1 className={styles.blue}>PROJECTS</h1>
+        </h1>
+        <p>These are some of the projects I have been working on. </p>
       </div>
 
       <ProductItem>

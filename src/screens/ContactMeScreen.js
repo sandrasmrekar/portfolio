@@ -69,7 +69,9 @@ export default function ConatctMeScreen() {
         onClose={handleCloseNotification}
         message={notificationText}
       />
-      <h1>Contact me</h1>
+      <h1>
+        CONTACT <h1 className={styles.blue}>ME</h1>
+      </h1>
       <p>
         I would love to here from you and tell more about myself and my journey.
         Send me an email down below.

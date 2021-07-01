@@ -61,6 +61,11 @@ textarea {
   font-family: inherit;
 }
 
+.blue {
+  color: #6c63ff;
+  display: inline;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
