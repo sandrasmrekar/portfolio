@@ -4,5 +4,9 @@ body {
   font-family: "comfortaa";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 85%;
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden !important;
 }
