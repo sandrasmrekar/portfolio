@@ -14,6 +14,11 @@ export default function WorkScreen() {
 
   return (
     <div id={WORK_SECTION} className={styles.container}>
+      <div className={styles.titleContainer}>
+        <h1>My Projects</h1>
+        <p>These are some of the projects I have been working on.</p>
+      </div>
+
       <ProductItem>
         <ProductItem.Header label="Green" number="01" />
         <ProductItem.SubHeader label="01 Green" />
