@@ -37,7 +37,7 @@ export default function StartScreen() {
   };
 
   return (
-    <div id={START_SECTION} className={styles.container}>
+    <section id={START_SECTION} className={styles.container}>
       <div className={classNameBackground} />
       <div className={styles.titleContainer}>
         <p className={styles.blue}>Hi I'm </p>
@@ -49,6 +49,6 @@ export default function StartScreen() {
         </h4>
       </div>
       <LinkIcons />
-    </div>
+    </section>
   );
 }

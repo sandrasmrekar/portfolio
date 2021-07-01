@@ -44,7 +44,12 @@ export default function MainScreen() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Menu value={menuValue} onChange={handleOnChange}>
         <Menu.Item label="Welcome" value={START_SECTION} />
         <Menu.Item label="Work" value={WORK_SECTION} />

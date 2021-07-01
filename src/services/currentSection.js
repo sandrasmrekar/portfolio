@@ -6,34 +6,30 @@ import {
 } from "../constants/sections";
 
 export function currentSection() {
-  const currentPosition = window.scrollY;
+  const OFFSET = window.innerHeight * 0.1;
+
+  const currentPosition = window.scrollY + OFFSET;
   const startSection = document.getElementById(START_SECTION);
   const workSection = document.getElementById(WORK_SECTION);
   const aboutSection = document.getElementById(ABOUT_ME_SECTION);
   const contactSection = document.getElementById(CONTACT_SECTION);
-  const OFFSET = 200;
+
   if (
-    currentPosition >= startSection.offsetTop - OFFSET &&
+    currentPosition >= startSection.offsetTop &&
     currentPosition < workSection.offsetTop
   ) {
     return START_SECTION;
-  }
-
-  if (
-    currentPosition >= workSection.offsetTop - OFFSET &&
+  } else if (
+    currentPosition >= workSection.offsetTop &&
     currentPosition < aboutSection.offsetTop
   ) {
     return WORK_SECTION;
-  }
-
-  if (
-    currentPosition >= aboutSection.offsetTop - OFFSET &&
+  } else if (
+    currentPosition >= aboutSection.offsetTop &&
     currentPosition < contactSection.offsetTop
   ) {
     return ABOUT_ME_SECTION;
-  }
-
-  if (currentPosition >= contactSection.offsetTop - OFFSET) {
+  } else if (currentPosition >= contactSection.offsetTop) {
     return CONTACT_SECTION;
   }
 }
