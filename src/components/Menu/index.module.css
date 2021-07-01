@@ -78,13 +78,14 @@
     transition: transform 200ms ease-in-out;
     width: 60px;
     cursor: pointer;
+    margin-right: 20px;
   }
 
   .text {
     text-align: right;
-    margin-left: -70%;
-    margin-top: 80px;
-    width: 150px;
+    margin-left: -160%;
+    margin-top: 210%;
+    width: 250px;
     color: #9b9b9b;
     transform: rotate(-90deg);
   }
@@ -93,9 +94,9 @@
     text-align: right;
     color: #8982ff;
     transform: rotate(-90deg);
-    margin-top: 150px;
-    width: 200px;
-    margin-left: -120%;
+    margin-top: 160px;
+    width: 300px;
+    margin-left: -200%;
   }
 
   .bar {
