@@ -5,6 +5,7 @@ import styles from "./ContactMeScreen.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { CONTACT_SECTION } from "../constants/sections";
+import Map from "../components/Map";
 
 const validation = Yup.object().shape({
   from_name: Yup.string().required("Required"),
@@ -62,8 +63,10 @@ export default function ConatctMeScreen() {
       handleSubmit(values);
     },
   });
+
   return (
     <div id={CONTACT_SECTION} className={styles.container}>
+      <Map />
       <Notification
         show={show}
         onClose={handleCloseNotification}
