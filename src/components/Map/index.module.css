@@ -18,17 +18,8 @@
   background-color: black;
 }
 
-img {
-  position: absolute;
-  margin-top: -15px;
-  height: 105%;
-  width: 50%;
-  right: 0;
-}
-
-.text {
-  color: white;
-  position: absolute;
-  right: 10%;
-  top: 35%;
+@media screen and (max-width: 600px) {
+  .mapContainer {
+    display: block;
+  }
 }
