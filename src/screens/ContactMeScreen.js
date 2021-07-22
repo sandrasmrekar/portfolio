@@ -76,10 +76,7 @@ export default function ConatctMeScreen() {
         <h1>CONTACT</h1>
         <h1 className={styles.blue}>ME</h1>
       </div>
-      <p>
-        I would love to here from you and tell more about myself and my journey.
-        Send me an email down below.
-      </p>
+
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.formInput}>
           <label htmlFor="from_name">NAME</label>
