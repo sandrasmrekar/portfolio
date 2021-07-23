@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { CONTACT_SECTION } from "../constants/sections";
 import Map from "../components/Map";
+import Arrow from "../assets/svg/arrow.svg";
 
 const validation = Yup.object().shape({
   from_name: Yup.string().required("Required"),
@@ -72,55 +73,58 @@ export default function ConatctMeScreen() {
         onClose={handleCloseNotification}
         message={notificationText}
       />
-      <div className={styles.titleContainer}>
-        <h1>CONTACT</h1>
-        <h1 className={styles.blue}>ME</h1>
-      </div>
+      <div className={styles.formContainer}>
+        <div className={styles.titleContainer}>
+          <h1>CONTACT</h1>
+          <h1 className={styles.blue}>ME</h1>
+        </div>
 
-      <form onSubmit={formik.handleSubmit}>
-        <div className={styles.formInput}>
-          <label htmlFor="from_name">NAME</label>
-          <input
-            id="from_name"
-            name="from_name"
-            type="text"
-            value={formik.values.from_name}
-            onChange={formik.handleChange}
-          />
-        </div>
-        {formik.errors.from_name && (
-          <p className={styles.errorMessage}>{formik.errors.from_name}</p>
-        )}
-        <div className={styles.formInput}>
-          <label htmlFor="reply_to">EMAIL</label>
-          <input
-            id="reply_to"
-            name="reply_to"
-            type="reply_to"
-            value={formik.values.reply_to}
-            onChange={formik.handleChange}
-          />
-        </div>
-        {formik.errors.reply_to && (
-          <p className={styles.errorMessage}>{formik.errors.reply_to}</p>
-        )}
-        <div className={styles.formInput}>
-          <label htmlFor="message">MESSAGE</label>
-          <textarea
-            id="message"
-            name="message"
-            type="text"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-          />
-        </div>
-        {formik.errors.message && (
-          <p className={styles.errorMessage}>{formik.errors.message}</p>
-        )}
-        <button type="submit" className={styles.sendBtn}>
-          {formik.isSubmitting ? "Sending..." : "SEND EMAIL"}
-        </button>
-      </form>
+        <form onSubmit={formik.handleSubmit}>
+          <div className={styles.formInput}>
+            <label htmlFor="from_name">NAME</label>
+            <input
+              id="from_name"
+              name="from_name"
+              type="text"
+              value={formik.values.from_name}
+              onChange={formik.handleChange}
+            />
+          </div>
+          {formik.errors.from_name && (
+            <p className={styles.errorMessage}>{formik.errors.from_name}</p>
+          )}
+          <div className={styles.formInput}>
+            <label htmlFor="reply_to">EMAIL</label>
+            <input
+              id="reply_to"
+              name="reply_to"
+              type="reply_to"
+              value={formik.values.reply_to}
+              onChange={formik.handleChange}
+            />
+          </div>
+          {formik.errors.reply_to && (
+            <p className={styles.errorMessage}>{formik.errors.reply_to}</p>
+          )}
+          <div className={styles.formInput}>
+            <label htmlFor="message">MESSAGE</label>
+            <textarea
+              id="message"
+              name="message"
+              type="text"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+            />
+          </div>
+          {formik.errors.message && (
+            <p className={styles.errorMessage}>{formik.errors.message}</p>
+          )}
+          <button type="submit" className={styles.sendBtn}>
+            {formik.isSubmitting ? "Sending..." : "SEND"}
+            <img id={styles.arrow} src={Arrow} alt="arrow" />
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

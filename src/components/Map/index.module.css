@@ -1,8 +1,7 @@
 .mapContainer {
-  margin-left: -13%;
-  margin-right: -13%;
   height: 400px;
   display: flex;
+  background-color: khaki;
 }
 
 .map {
@@ -20,10 +19,10 @@
 @media screen and (max-width: 600px) {
   .mapContainer {
     display: block;
-    height: 800px;
+    height: 600px;
   }
 
   .map {
-    height: 40%;
+    height: 50%;
   }
 }
