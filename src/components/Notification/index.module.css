@@ -1,0 +1,51 @@
+/* Notification */
+
+.showNotification,
+.hideNotification {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #6c63ff;
+  border-radius: 10px;
+  position: fixed;
+  color: white;
+  z-index: 9999;
+  padding: 10px;
+  display: flex;
+  width: 65%;
+}
+
+.showNotification {
+  top: 10px;
+  transition: top 0.5s ease-in-out;
+}
+
+.hideNotification {
+  top: -100%;
+  transition: top 0.5s ease-in-out;
+}
+
+.small {
+  flex: 1;
+}
+@media screen and (max-width: 600px) {
+  .small {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .showNotification,
+  .hideNotification {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .small {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .showNotification,
+  .hideNotification {
+    width: 65%;
+  }
+}

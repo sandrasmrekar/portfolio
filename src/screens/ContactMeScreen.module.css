@@ -1,0 +1,75 @@
+.container {
+  padding-bottom: 5%;
+  position: relative;
+  min-height: 100vh;
+  margin: auto;
+  width: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.errorMessage {
+  font-size: 15px;
+  color: red;
+}
+
+.formInput {
+  flex-direction: column;
+  margin-top: 20px;
+  display: flex;
+}
+
+.sendBtn {
+  background: none;
+  border-style: none;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  margin: 15px 0 15px 0;
+  font-family: "Fugaz One", cursive;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  font-family: Comfortaa;
+  margin: 15px 0 15px 0;
+  border-style: none;
+  font-size: 15px;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+input {
+  height: 30px;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+.blue {
+  color: #6c63ff;
+  display: inline;
+}
+
+.formContainer {
+  margin: auto;
+  width: 50%;
+  padding-top: 10%;
+}
+
+#arrow {
+  height: 25px;
+  margin: 0 0 0 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.sendBtn:hover #arrow {
+  margin: 0 0 0 30px;
+  transition: all 200ms ease-in-out;
+}
