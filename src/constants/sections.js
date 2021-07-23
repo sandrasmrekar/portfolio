@@ -1,4 +1,0 @@
-export const START_SECTION = "START_SECTION";
-export const WORK_SECTION = "WORK_SECTION";
-export const ABOUT_ME_SECTION = "ABOUT_ME_SECTION";
-export const CONTACT_SECTION = "CONTACT_SECTION";
