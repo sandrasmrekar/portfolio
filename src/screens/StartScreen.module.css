@@ -74,4 +74,8 @@
   .titleContainer {
     margin-top: 25%;
   }
+
+  .row {
+    display: block;
+  }
 }
