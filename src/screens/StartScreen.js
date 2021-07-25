@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import LinkIcons from "../components/LinkIcons";
 import { START_SECTION } from "../constants/sections";
 import styles from "./StartScreen.module.css";
+import ScrollSvg from "../assets/svg/scrollDown.svg";
 
 export default function StartScreen() {
   const linksElement = document.getElementById("links");
@@ -48,6 +49,7 @@ export default function StartScreen() {
         <h1 className={styles.white}>FOCUSED ON UX AND FRONTEND DEVELOPMENT</h1>
       </div>
       <LinkIcons />
+      <img className={styles.scrollSvg} src={ScrollSvg} alt="scroll" />
     </section>
   );
 }

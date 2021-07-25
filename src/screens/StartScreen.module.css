@@ -41,11 +41,13 @@
 .white {
   color: white;
   margin-bottom: 5px;
+  margin-right: 20px;
 }
 
 .outline {
   font-family: "Bungee Outline", cursive;
   color: white;
+  margin-top: 5px;
 }
 
 .grey {
@@ -61,8 +63,15 @@
   color: #8982ff;
 }
 
+.scrollSvg {
+  height: 20%;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+}
+
 @media screen and (max-width: 600px) {
   .titleContainer {
-    margin-top: 50%;
+    margin-top: 25%;
   }
 }
