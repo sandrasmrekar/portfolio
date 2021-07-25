@@ -40,13 +40,12 @@ export default function StartScreen() {
     <section id={START_SECTION} className={styles.container}>
       <div className={classNameBackground} />
       <div className={styles.titleContainer}>
-        <p className={styles.blue}>Hi I'm </p>
-        <h1 className={styles.white}>SANDRA SMREKAR</h1>
-        <h2 className={styles.grey}>A frontend developer</h2>
-        <h4 className={styles.text}>
-          I am a software engineer with passion for coding and learning new
-          things.
-        </h4>
+        <p className={styles.blue}>HI I'M SANDRA </p>
+        <div className={styles.row}>
+          <h1 className={styles.white}>SOFTWARE </h1>
+          <h1 className={styles.outline}>ENGINEER</h1>
+        </div>
+        <h1 className={styles.white}>FOCUSED ON UX AND FRONTEND DEVELOPMENT</h1>
       </div>
       <LinkIcons />
     </section>
