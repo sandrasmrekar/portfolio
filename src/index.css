@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "comfortaa";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

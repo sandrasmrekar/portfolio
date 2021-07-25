@@ -78,4 +78,9 @@
   .row {
     display: block;
   }
+
+  .scrollSvg {
+    height: 15%;
+    margin-top: 10%;
+  }
 }
