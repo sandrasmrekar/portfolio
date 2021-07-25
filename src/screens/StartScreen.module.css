@@ -28,7 +28,7 @@
 
 .backgroundScroll {
   transition: all 300ms ease-in-out;
-  background-color: #131313;
+  background-color: #212121;
   position: absolute;
   border-radius: 20px;
   z-index: -1;

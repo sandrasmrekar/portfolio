@@ -1,8 +1,8 @@
 @media screen and (max-width: 900px) {
+  .containerHide,
   .containerShow {
     transition: transform 200ms ease-in-out;
-    background-color: #131313;
-    transform: translateY(0%);
+    background-color: #212121;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -10,16 +10,12 @@
     left: 0;
     top: 0;
   }
+
+  .containerShow {
+    transform: translateY(0%);
+  }
   .containerHide {
-    transition: transform 200ms ease-in-out;
     transform: translateY(-100%);
-    background-color: #131313;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    left: 0;
-    top: 0;
   }
 
   .showButton {
@@ -33,13 +29,13 @@
 
   .menuItemContainer {
     padding: 30px;
+    margin-top: 20%;
   }
 
   .menuItem {
-    justify-content: center;
+    text-align: center;
     cursor: pointer;
-    display: flex;
-    margin: 35px;
+    margin: 50px;
   }
 
   .text {

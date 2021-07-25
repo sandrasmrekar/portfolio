@@ -51,10 +51,10 @@ export default function MainScreen() {
       }}
     >
       <Menu value={menuValue} onChange={handleOnChange}>
-        <Menu.Item label="Welcome" value={START_SECTION} />
-        <Menu.Item label="Work" value={WORK_SECTION} />
-        <Menu.Item label="About me" value={ABOUT_ME_SECTION} />
-        <Menu.Item label="Contact" value={CONTACT_SECTION} />
+        <Menu.Item label="WELCOME" value={START_SECTION} />
+        <Menu.Item label="WORK" value={WORK_SECTION} />
+        <Menu.Item label="ABOUT ME" value={ABOUT_ME_SECTION} />
+        <Menu.Item label="CONTACT" value={CONTACT_SECTION} />
       </Menu>
       <StartScreen />
       <WorkScreen />
