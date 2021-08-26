@@ -1,3 +1,4 @@
+import React from 'react';
 import DeleteButton from "../CloseButton";
 import styles from "./index.module.css";
 export default function Notification({ show, message, onClose }) {

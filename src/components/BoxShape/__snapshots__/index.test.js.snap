@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check the right rendering 1`] = `
+<div
+  className="boxContainer"
+>
+  <div
+    className="line"
+  />
+  <div
+    className="middle"
+  >
+    <div
+      className="center"
+    />
+  </div>
+  <div
+    className="line"
+  />
+</div>
+`;

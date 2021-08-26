@@ -1,6 +1,6 @@
-import { ReactComponent as DeleteSVG } from "../../assets/svg/delete.svg";
+import React from 'react';
 import styles from "./index.module.css";
 
 export default function DeleteButton({ onClick }) {
-  return <DeleteSVG className={styles.icon} onClick={onClick} />;
+  return <div className={styles.icon} onClick={onClick} data-testid="toggle">X</div>;
 }
